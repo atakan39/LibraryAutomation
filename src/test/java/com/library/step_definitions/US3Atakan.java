@@ -13,6 +13,7 @@ public class US3Atakan {
 
         DB_Util.runQuery(US3.populerGenre);
     }
+
     @Then("verify that {string} is the most popular book genre.")
     public void verify_that_is_the_most_popular_book_genre(String mostPopular) {
         String actualPopular=DB_Util.getFirstRowFirstColumn();
@@ -20,10 +21,4 @@ public class US3Atakan {
         Assert.assertTrue(mostPopular.equals(actualPopular));
     }
 
-
-   /*     String expectedPopular=String;
-        String actualPopular=DB_Util.getFirstRowFirstColumn();
-        System.out.println("actualPopular = " + actualPopular +" Expected Popular = "+expectedPopular);
-        Assert.assertTrue(expectedPopular.equals(actualPopular));
-   */
 }

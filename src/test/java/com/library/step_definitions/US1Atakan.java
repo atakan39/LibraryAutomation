@@ -12,7 +12,7 @@ import org.junit.Assert;
 import java.sql.*;
 import java.util.List;
 
-public class US1Atakan extends US1{
+public class US1Atakan {
 
 
 
@@ -35,22 +35,7 @@ public class US1Atakan extends US1{
         Assert.assertTrue(expectedUniqueUsersID==totalUserID);
         System.out.println("totalUserID = "+totalUserID+ " expectedUniqueUsersID = " + expectedUniqueUsersID );
     }
-/*
-    @When("Execute query to get all IDs from users")
-    public void execute_query_to_get_all_IDs_from_users() {
-        DB_Util.runQuery("Select count('id') From users");
-        int expectedIDsCount = Integer.parseInt(DB_Util.getFirstRowFirstColumn());
-        System.out.println("expectedIDsCount = " + expectedIDsCount);
-    }
-    @Then("verify all users has unique ID")
-    public void verify_all_users_has_unique_id() {
-        int actualNonIDsCount = 0;
-        DB_Util.runQuery("SELECT count(\"id\") As \"Total Entries\" FROM users where id is null");
-        int expectedNonIDsCount = Integer.parseInt(DB_Util.getFirstRowFirstColumn());
-        Assert.assertEquals(expectedNonIDsCount, actualNonIDsCount);
 
-    }
-*/
 
     List<String>expectedList;
     @When("Execute query to get all columns")
